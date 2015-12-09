@@ -107,4 +107,22 @@
 		<source-file src="src/android/Library/res/values-ja/multiimagechooser_strings_ja.xml" target-dir="res/values-ja"/>
 		<source-file src="src/android/Library/res/values-ko/multiimagechooser_strings_ko.xml" target-dir="res/values-ko"/>
 	</platform>
+	
+	 <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ImagePickerPlugin">
+                <param name="wp-package" value="ImagePickerPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/ImagePickerPlugin.cs" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/ImagePickerPluginProxy.js" name="ImagePickerPluginProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
 </plugin>
